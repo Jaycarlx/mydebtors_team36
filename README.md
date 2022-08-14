@@ -7,6 +7,8 @@ This is a platform that allows schools in a certain locality to list the directo
 
 * [Background](#background)
 * [About the Project](#about-the-project)
+* [Directory Structure](#directory-structure-for-server-deployement)
+* [Installation](#installation)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Product Specification](#product-specialization)
@@ -22,6 +24,28 @@ This is a platform that allows schools in a certain locality to list the directo
 * This project was created to solve/avoid the problem of students applying to another school in the locality while still having pending or uncleared debts from their previous school.
 * This project is solely aimed at schools to help keep the aformentioned problem in check and also allows the students that have posted as debtors to challenge and contend the post.
 
+## Directory Structure for server deployment
+
+* The backend files can be found in the __school_app__ and __school_prj__ folder
+* The __school_prj__ is the django Project directory
+* The user accounts and Authentication backend files are in the __account__ folder
+* The Front-end files(Html, css and js plus images) are in the __static__ folder
+* The backend templates for the sign up and sign in are in the __templates__ folder
+* The invididual contribution .md files for each team member are in the __tasks__ folder
+* __Monlolith Django templating__ is being used for the project
+* The __requirements.txt__ file contains the required dependencies installed for the project
+
+## Installation
+To run server locally on windows, it is assumed that you have python 3 and git cli/desktop installed
+* Clone the repo - https://github.com/zuri-training/proj_debtors-team-36.git
+* cd to the sub folder of the repo
+* To create virtual environment, run the command `python -m venv proj_debtors-team-46`
+* To activate virtual environment, run `proj_debtors-team-36\Scripts\activate`
+* Run `python -m pip install django` to install django in the virtual environment
+* use the command `pip install -r requirements.txt` to install all the dependencies
+* After this, go a step into the repo folder with the command `cd proj_debtors-team-36`
+* Run `python manage.py runserver` to start the local server running
+* Visit homepage on your browser by entering __127.0.0.1.8000__ on your browser address 
 ## Technologies Used
 This project was created with ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) and the following technologies were used: <br/>
 * __Design__<br/>
@@ -39,8 +63,6 @@ This project was created with ![Visual Studio Code](https://img.shields.io/badge
 * __Database__<br/>
         ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
 
-* __API__<br/>
-        ![DjangoREST](https://img.shields.io/badge/DJANGO-REST-ff1709?style=for-the-badge&logo=django&logoColor=white&color=ff1709&labelColor=gray)
 
 * __Project Management and Version Control__<br/>
         ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
@@ -119,7 +141,7 @@ For team_36 members, follow the following steps to collaborate:
     `git push origin branchName` - This creates the branch remotely and pushes to that branch on the Github
 10. Go to Github and create a new pull request to the main branch. It will then be reviewed and merged into the master.
 
-*If you need to make an update, repeat from no 4*
+*If you need to make an update, repeat from no 4 (Skip no 6)*
 
 ## Contributors
 
@@ -146,10 +168,6 @@ __Aduragbemi Oroja__
 
 __Adelakin Isreal__
 * Github- https://github.com/Ezrahel
-* Track - Backend(Python)
-
-__Lana Alahmar__
-* Github- https://github.com/Lana-Alahmar
 * Track - Backend(Python)
 
 __Omolade Temitope__
@@ -200,7 +218,7 @@ __Rita Sylvia__
 * Github- https://github.com/ritasylvia
 * Track - Backend
 
-__Taiwo Laskai__
+__Lasaki Taiwo__
 * Github- https://github.com/Tamazing
 * Track - FullStack
 
@@ -217,12 +235,21 @@ __Osadere Gideon__
 * Track- Product Design
 
 __John Amakoh__
-* Github- https://github.com/OGidos
+* Github- https://github.com/JohnChizzy
 * Track- Fullstack
 
+__Iniubong Abasi__
+* Github- https://github.com/IniubongJ
+* Track- Product Design
 
 ## Documentation
-A more detailed documentation on the updates and details of this project can be found here - "documentationLinkWhenReady"
+The documentaion that includes details on how the project was built from the backend, prerequisites, installation procedures, etc can be found here - "Documentationlinkwhenready"
+## Design
+The design for this project was done by the product design team on figma. Check out the design [here](https://www.figma.com/file/OnOlNH07Q0By2YOEDJIhi4?node-id=417:2)
+
+
+## Project Documentation
+A more detailed documentation on the updates,features and details of this project can be found [here](https://docs.google.com/document/d/16CPt2fXZ0yxgzU6eVFkCaoYp0vyjdBYsWjMzPmxbdeQ/edit)
 
 ## Acknowledgements
 
