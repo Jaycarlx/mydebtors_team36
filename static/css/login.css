@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
 * {
   margin: 0px;
   padding: 0px;
@@ -6,13 +8,46 @@
 
 body {
   user-select: none;
+  font-family: 'Manrope', sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
-  --main-color: #0855A2;
+  --main-color:  #0a66c2;
   --font-color: #FEFEFE;
   --border-color: #0A66C2;
   --dark-font-color: #292929;
+
+  --main_color: #0A66C2;
+    --footer_color: #0A66C2;
+    --text_color: #292929;
+    --white_color: #ffffff;
+    --hover_color: #3380cc;
+    --clicked_color: #074481;
+    --disabled_color: #a8a8a8;
+}
+
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main_color);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover_color);
 }
 
 .row {
@@ -24,23 +59,25 @@ body {
 
 .left {
 position: absolute;
-width: 804px;
+width: 50.25rem;
 height: 1024px;
 left: 0px;
 top: 0px;
 background: rgba(61, 61, 61, 0.37);
 background-image: url(../img/Rectangle\ 90.jpg);
+background-blend-mode: darken;
 background-size: 100%;
   flex: 60%;
   flex-wrap: wrap;
 }
-.top-icon{
+.top-icon svg{
 display: flex;
 flex-direction: row;
 align-items: center;
 padding: 0px;
 gap: 8px;
 position: absolute;
+margin-left: 4.6875rem;
 width: 188.21px;
 height: 56px;
 left: 72px;
@@ -56,13 +93,14 @@ gap: 8px;
 position: absolute;
 width: 657px;
 height: 199px;
-left: 75px;
-top: 413px;
+margin-left: 75px;
+margin-top: 413px;
 }
-h2{
+.left-content h2{
 width: 657px;
 height: 110px;
 font-family: 'Manrope';
+margin-left: 4.6874rem;
 font-style: normal;
 font-weight: 700;
 font-size: 40px;
@@ -74,7 +112,7 @@ flex: none;
 order: 0;
 flex-grow: 0;
 }
-h4{
+.left-content h4{
 width: 646px;
 height: 81px;
 font-family: 'Manrope';
@@ -83,8 +121,10 @@ font-weight: 500;
 font-size: 20px;
 line-height: 27px;
 display: flex;
+margin-left: 4.6874rem;
 align-items: center;
 color: var(--font-color);
+font-family: 'Manrope', sans-serif;
 flex: none;
 order: 1;
 flex-grow: 0;
@@ -106,7 +146,6 @@ h1 {
   margin-bottom: 5px;
   text-align: center;
   height: 48px;
-  font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
@@ -126,7 +165,6 @@ margin-left: 60px;
 .welcome {
   width: 412px;
   height: 30px;
-  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -165,7 +203,6 @@ margin-left: 60px;
     .email-head {
       width: 109px;
       height: 24px;
-      font-family: 'Poppins';
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
@@ -179,7 +216,6 @@ margin-left: 60px;
       #email {
         width: 526px;
         height: 56px;
-        font-family: 'Poppins';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -211,7 +247,6 @@ margin-left: 60px;
           .email-psw {
             width: 75px;
             height: 24px;
-            font-family: 'Poppins';
             font-style: normal;
             font-weight: 400;
             font-size: 16px;
@@ -228,7 +263,6 @@ margin-left: 60px;
               gap: 8px;
               width: 500px;
               height: 56px;
-              font-family: 'Poppins';
               font-style: normal;
               font-weight: 400;
               font-size: 16px;
@@ -285,7 +319,6 @@ i {
  flex-grow: 0;
 }
 .rem-label{
-  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -308,10 +341,8 @@ i {
 }
 
 .forgot {
-  font-family: 'Poppins';
   font-weight: 400;
   font-style: italic;
-  font-size: 16px;
   line-height: 24px;
   letter-spacing: -2%;
   flex: 50%;
@@ -322,6 +353,7 @@ i {
 .forgot a {
   color: var(--main-color);
   text-decoration: none;
+  font-size: 1rem;
 }
 .bottom{
 display: flex;
@@ -350,11 +382,9 @@ flex: none;
 order: 0;
 flex-grow: 0;
 border: none;
-
-font-family: 'Manrope';
 font-style: normal;
 font-weight: 400;
-font-size: 16px;
+font-size: 1.5rem;
 line-height: 22px;
 display: flex;
 align-items: center;
@@ -366,7 +396,6 @@ flex-grow: 0;
 #login-tag {
 width: 288px;
 height: 27px;
-font-family: 'Poppins';
 font-style: normal;
 font-weight: 400;
 font-size: 18px;
@@ -377,12 +406,19 @@ order: 1;
 flex-grow: 0;
 }
 
-a.login-tag {
+.login-tag {
   color: var(--main-color);
-  font-size: 20px;
+  font-size: 1rem;
+  margin-left: 1em;
 }
 
-
+button{
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+  cursor: pointer;
+}
 
 
 

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 * {
   margin: 0px;
   padding: 0px;
@@ -145,6 +146,8 @@ img {
   line-height: 38px;
   display: flex;
   color: var(--font-color);
+  cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -153,7 +156,7 @@ p {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 1.5rem;
   line-height: 38px;
   display: flex;
   align-items: center;

@@ -5,7 +5,7 @@
 }
 :root {
   --main_color: #0A66C2;
-  --footer_color: #0855A2;
+  --footer_color: #0A66C2;
   --text_color: #292929;
   --white_color: #ffffff;
   --hover_color: #3380cc;
@@ -261,8 +261,8 @@ background-image: url("https://s3-alpha-sig.figma.com/img/ba9e/1b94/3896e4f0a2ed
   margin-left: 30px;
   height: 54px;
   color: white;
-  background-color: #0855a2;
-  border: blue;
+  background-color: #0A66C2;
+  border: #0A66C2;
   border-radius: 5px;
   width: 200px;
   cursor: pointer;
@@ -273,7 +273,7 @@ background-image: url("https://s3-alpha-sig.figma.com/img/ba9e/1b94/3896e4f0a2ed
   margin-left: -155px;
   height: 54px;
   background-color: #fefefe;
-  border: blue;
+  border: #0A66C2;
   border-radius: 5px;
   color: #8c949c;
   width: 200px;

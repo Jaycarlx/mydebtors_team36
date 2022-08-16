@@ -1,6 +1,3 @@
-
-
-  {% load static %}
   <!DOCTYPE html>
   <html lang="en">
   
@@ -9,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="{% static './css/login.css' %}" />
-    <link rel="stylesheet" href=" {% static 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css' %}" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
   </head>
   
   <body>
@@ -65,8 +62,7 @@
           <p class="welcome">Welcome back! please enter your details.</p>
         </div>
   
-          <form method="post">
-            {% csrf_token %}}
+          
             <div class="mid">
               <div class="emaill">
                 <label class="email-head" for="email">Email Address</label><br />
@@ -76,9 +72,8 @@
               <div class="pass">
                 <label class="email-psw" for="password">Password</label><br />
                 <div class="visibility">
-   views_urls 
               <!-- {{ form.password }} -->
-                  <input type="password" autocomplete="current-password" placeholder="**********" name="password"
+                  <input type="password" autocomplete="current-password" placeholder="**********"  name="password"
                     id="password" required /><br />
                   <i class="far fa-eye" id="togglePassword"></i>
                 </div>
@@ -90,15 +85,15 @@
                 <label class="rem-label" for="rem">Remember me</label><br />
               </div>
               <div class="forgot">
-                <p><a href="./forget-password.html">Forgot Password?</a></p>
+                <p><a href="forget-password.html">Forgot Password?</a></p>
                 <br />
               </div>
             </div>
             <div class="bottom">
-              <a href="./dashboard.html"><button type="submit" class="login-btn">Login</button><br /></a>
-              <p id="login-tag">Don't have an account?<a class="login-tag" href="./signup.html">sign up</a></p>
+              <a class="" href="dashboard.html"><button onclick="location.href = 'dashboard.html'"
+                class="login-btn">Login</button></a>
+              <p id="login-tag">Don't have an account?<a class="login-tag" href="signup.html">Sign up</a></p>
             </div>
-          </form>
       </div>
     </div>
   

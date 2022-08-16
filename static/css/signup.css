@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 *{
     box-sizing: border-box;
@@ -6,12 +6,43 @@
 }
 
 :root {
-    --main-color: #0855A2;
-    --font-color: #fefefe
+    --main-color: #0A66C2;
+    --font-color: #fefefe;
+    --main_color: #0A66C2;
+    --text_color: #292929;
+    --white_color: #ffffff;
+    --hover_color: #3380cc;
+    --clicked_color: #074481;
+    --disabled_color: #a8a8a8;
+    --side_navbar_width: 332px;
+    --search_bar_color: #D2D2D2;
   }
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main_color);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover_color);
+}
 
   body {
     user-select: none;
+    font-family: 'Manrope', sans-serif;
 }
 
 .flex-container{
@@ -30,7 +61,7 @@ div p{
 
 div h2{
     margin-bottom: 5px;
-    color: #0855A2;
+    color: #0A66C2;
     margin-top: 20px;
 }
 
@@ -51,7 +82,7 @@ border-left: 1px solid #9E9E9E
     flex: 54%;
     flex-wrap: wrap; 
    
-background-color:  #0855A2;
+background-color:  #0A66C2;
 
 }
 
@@ -85,15 +116,26 @@ input[type="text"]{
     border-radius: 5px;
     width: 80%;
     padding: 10px;
-    color: #0855A2;
+    color: #0A66C2;
 
 }
 
 
-input[type="submit"]{
-   background-color:  #0855A2;
+.login-btn{
+   background-color:  #0A66C2;
+   border: none;
    color: white;
    width: 50%;
    border-radius: 8px;
    padding: 15px;
+   font-size: 1.5rem;
+   cursor: pointer;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.log{
+    margin-left: 1rem;
+    font-size: 0.9em;
 }

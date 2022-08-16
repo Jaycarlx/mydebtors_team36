@@ -1,137 +1,211 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 :root {
-  --primary-color1: #0A66C2;
+    --main_color: #0A66C2;
+    --footer_color: #0A66C2;
+    --text_color: #292929;
+    --white_color: #ffffff;
+    --hover_color: #3380cc;
+    --clicked_color: #074481;
+    --disabled_color: #a8a8a8;
+
+    --primary-color1: #0A66C2;
   --text-color1: #141414;
   --text-color2: #1f1f1f;
   --text-color3: #ffffff;
   --h1-color: #292929;
   --p-color: #7e7e7e;
 
-  --main_color: #0A66C2;
-    --text_color: #292929;
-    --white_color: #ffffff;
-    --hover_color: #3380cc;
-    --clicked_color: #074481;
-    --disabled_color: #a8a8a8;
-}
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
 }
 
 body {
-  margin: 0px;
-  padding: 0px;
-  font-family: "Poppins", sans-serif;
-  background-color: #fefefe;
-  padding: 13px 72px 132px;
-  user-select: none;
-  position: absolute;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--white_color);
+    color: var(--text_color);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main_color);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover_color);
 }
 
 /* TOP NAVIGATION BAR STARTS HERE*/
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 48px;
-  padding: 40px 72px 0px 72px;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;
+    padding: 40px 72px 0px 72px;
+    margin-bottom: 20px;
 }
 
 nav .left-nav {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 nav .middle-nav {
-  display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
-  /* width: 378px; */
-  height: 27px;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 27px;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* width: 378px; */
+    height: 27px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
 }
-
+a{
+    text-decoration: none;
+}
 nav .middle-nav a {
-  text-decoration: none;
-  color: var(--text_color);
-  margin-right: 32px;
+    text-decoration: none;
+    color: var(--text_color);
+    margin-right: 32px;
 }
 
 nav .middle-nav a:active {
-  color: var(--main_color);
+    color: var(--main_color);
+}
+nav .middle-nav .current{
+    border-bottom: 4px solid var(--main_color);
+    border-radius: 6px;
+}
+nav .middle-nav a:hover{
+color: var(--hover_color);
 }
 
 nav a.active {
-  border-bottom: 4px solid var(--main_color);
-  border-radius: 6px;
+    border-bottom: 4px solid var(--main_color);
+    border-radius: 6px;
 }
 
 nav .right-nav {
-  width: 201px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
+    width: 201px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
 }
 
 .welcome-login-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 108px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  padding: 8px 16px;
-  border: 1.5px solid var(--main_color);
-  border-radius: 8px;
-  color: var(--main_color);
-  cursor: pointer;
-  text-decoration: none;
-  background-color: var(--white_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 108px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 8px 16px;
+    border: 1.5px solid var(--main_color);
+    border-radius: 8px;
+    color: var(--main_color);
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--white_color);
 }
 
 .welcome-login-btn:hover {
-  border: 1.5px solid var(--hover_color);
-  color: var(--hover_color);
+    border: 1.5px solid var(--hover_color);
+    color: var(--hover_color);
 }
 
 .welcome-login-btn:active {
-  border: 1.5px solid var(--clicked_color);
-  color: var(--clicked_color);
+    border: 1.5px solid var(--clicked_color);
+    color: var(--clicked_color);
 }
 
 .welcome-signup-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 108px;
-  height: 48px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 22px;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 8px;
-  color: var(--white_color);
-  cursor: pointer;
-  text-decoration: none;
-  background-color: var(--main_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 108px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    color: var(--white_color);
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--main_color);
 }
 
 .welcome-signup-btn:hover {
-  background-color: var(--hover_color);
+    background-color: var(--hover_color);
 }
 
 .welcome-signup-btn:active {
-  background-color: var(--clicked_color);
+    background-color: var(--clicked_color);
+}
+
+.showNavDropdown {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 70px;
+    right: 5px;
+    width: 95%;
+}
+
+.show button {
+    height: 50px;
+    cursor: pointer;
+    background-color: var(--main_color);
+    border: none;
+    border-bottom: 2px solid var(--white_color);
+    color: var(--white_color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.show button:hover {
+    background-color: var(--hover_color);
+}
+
+.show button:active {
+    background-color: var(--clicked_color);
 }
 
 /* TOP NAVIGATION BAR ENDS HERE */
@@ -139,6 +213,7 @@ nav .right-nav {
 main {
   display: flex;
   z-index: 10000;
+  padding-left: 3rem;
 }
 main .error {
   flex: 1 1 45.2777778%;
@@ -169,7 +244,7 @@ main .error h3 {
   font-size: 40px;
   font-weight: 400;
   line-height: 60px;
-  margin-top: 16px;
+  margin-top: 0.5rem;
   letter-spacing: 0em;
   text-align: left;
   color: #3d3d3d;
@@ -186,23 +261,22 @@ main .error p {
   width: 580px;
   left: 72px;
   top: 302px;
-  margin-top: 20px;
+  margin-top: 0.5rem;
 }
 
 main .error button {
   background-color: var(--primary-color1);
   border-radius: 8px;
   border: none;
-  width: 438px;
-  height: 108px;
-  font-size: 40px;
+  width: 14rem;
+  height:3rem;
+  font-size: 1.8rem;
   font-weight: 400;
-  line-height: 60px;
   letter-spacing: 0em;
   text-align: left;
   color: #ffffff;
-  margin-top: 40px;
-  padding: 24px 40px;
+  margin-top: 0.5rem;
+  padding: 5px ;
   cursor: pointer;
 }
 
@@ -226,4 +300,98 @@ main .error button {
 
 main .erropic {
   z-index: 100;
+  width: 3rem;
+}
+
+
+@media screen and (max-width: 576px) {
+
+  /* START COPY HERE */
+main{
+  flex-direction: column;
+}
+  body {
+      display: flex;
+      justify-content: center;
+  }
+
+  ::-webkit-scrollbar {
+      width: 5px;
+  }
+
+
+  .small-screen {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 56px;
+      margin-top: -50px;
+      margin-bottom: 5px;
+  }
+
+  .search-not {
+      display: none;
+  }
+
+  .search-bar {
+      width: 100%;
+      margin: 0;
+  }
+
+  .showNav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: var(--white_color);
+      cursor: pointer;
+  }
+
+  aside {
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      background-color: rgba(0, 0, 0, 0.35);
+      z-index: 1;
+  }
+
+  .aside-container {
+      width: 60%;
+  }
+
+  .hideNav {
+      width: 40%;
+      display: flex;
+      align-items: flex-start;
+      background-color: rgba(0, 0, 0, 0);
+  }
+
+  .hideNav button {
+      background-color: rgba(230, 213, 213, 0.8);
+      border: none;
+      margin-top: 100px;
+      cursor: pointer;
+  }
+
+  main {
+      width: 95%;
+      margin-left: 0px;
+      /* Remove the margin left applied in your main content for the web view */
+      padding: 48px 16px 10px 16px;
+  }
+
+  main{
+    flex-direction: column;
+    padding: 0;
+  }
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .line1, .line2{
+      display: none;
+    }
+  /* ADD THE ABOVE STYLES TO YOUR MAIN TAG FOR SCREEN SIZING */
+  /*  STOP COPY HERE */
 }

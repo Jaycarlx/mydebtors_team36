@@ -6,7 +6,7 @@
 
 :root {
     --main_color: #0A66C2;
-    --footer_color: #0855A2;
+    --footer_color: #0A66C2;
     --text_color: #292929;
     --white_color: #ffffff;
     --hover_color: #3380cc;
@@ -64,7 +64,9 @@ nav .left-nav {
     display: flex;
     align-items: center;
 }
-
+a{
+    text-decoration: none;
+}
 nav .middle-nav {
     display: flex;
     /* justify-content: space-between; */
@@ -84,6 +86,13 @@ nav .middle-nav a {
 
 nav .middle-nav a:active {
     color: var(--main_color);
+}
+nav .middle-nav .current{
+    border-bottom: 4px solid var(--main_color);
+    border-radius: 6px;
+}
+nav .middle-nav a:hover{
+color: var(--hover_color);
 }
 
 nav a.active {

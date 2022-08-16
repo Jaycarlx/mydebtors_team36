@@ -1,376 +1,188 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
     box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
 }
 
 :root {
-    --main-color: #0855A2;
-    --font-color: #FEFEFE;
-    --border-color: #0A66C2;
-    --dark-font-color: #292929;
+    --main_color: #0A66C2;
+    --text_color: #292929;
+    --white_color: #ffffff;
+    --hover_color: #3380cc;
+    --clicked_color: #074481;
+    --disabled_color: #a8a8a8;
+    --side_navbar_width: 332px;
+    --search_bar_color: #D2D2D2;
 }
 
 body {
-    position: relative;
-    width: 1440px;
-    height: 1024px;
-    background-color: var(--font-color);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--font-color);
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--white_color);
+    color: var(--text_color);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
-    color: #3D3D3D;
-
+    overflow-x: hidden;
 }
 
+/* Custom Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main_color);
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover_color);
+}
+
+/* SIDE NAVIGATION BAR STARTS HERE */
 /* Side nav */
+/* Copy this code to implement the side nav styling */
+
 aside {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 0px;
-    gap: 8px;
-    position: absolute;
-    width: 332px;
-    height: 100vh;
-    left: 0px;
-    top: 0px;
-    background-color: var(--main-color);
-
+    justify-content: space-between;
+    /* width: var(--side_navbar_width); */
+    /* background-color: red; */
     position: fixed;
-    /* fixes the side bar and prevents scrolling. Set the margin-left property of the screen by its right to 332px */
 }
 
-.top-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 80px 0px 0px 48px;
-    gap: 8px;
-    width: 332px;
-    height: 136px;
-}
-
-.rest {
+.aside-container {
+    height: 100vh;
+    width: var(--side_navbar_width);
+    min-width: var(--side_navbar_width);
+    background-color: var(--main_color);
+    color: var(--white_color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
-    padding: 48px 0px;
-    gap: 8px;
-    width: 332px;
-    height: 880px;
+    /* fixes the side bar and prevents scrolling. Set the margin-left property of the screen by its right to 332px */
 }
+
 
 .aside-top {
+    width: 100%;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-    width: 332px;
-    height: 248px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
 }
 
-.home {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 16px 48px;
-    gap: 32px;
-    width: 332px;
-    height: 56px;
-    background: var(--font-color);
-}
-
-img {
-    width: 24px;
-    height: 24px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-}
-
-.img.active {
-    background-color: var(--font-color);
-    color: #292929;
-}
-
-.svg {
-    width: 24px;
-    height: 24px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-}
-
-#home {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-    width: 44px;
-    height: 22px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    color: var(--dark-font-color);
-}
-
-.profile {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 16px 48px;
-    gap: 32px;
-    width: 332px;
-    height: 56px;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-}
-
-#profile {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-    width: 80px;
-    height: 22px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
-
-.debtors {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 16px 48px;
-    gap: 32px;
-    width: 332px;
-    height: 56px;
-    flex: none;
-    order: 2;
-    align-self: stretch;
-    flex-grow: 0;
-}
-
-#debtor {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-    width: 44px;
-    height: 22px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
-
-.summary {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 16px 48px;
-    gap: 32px;
-    width: 332px;
-    height: 56px;
-    flex: none;
-    order: 3;
-    align-self: stretch;
-    flex-grow: 0;
-}
-
-#summary {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
+.top-icon {
     width: 100%;
-    height: 22px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+    margin-bottom: 56px;
+    padding-left: 48px;
 }
 
-.aside-top a {
-    width: 119px;
-    height: 22px;
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+.top-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.top-links a {
+    text-decoration: none;
+    color: var(--white_color);
+    width: 100%;
+    height: 56px;
     display: flex;
     align-items: center;
-    color: #FEFEFE;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 16px 48px;
 }
 
-.aside-top a.active {
-    background-color: var(--font-color);
-    color: #292929;
+.top-links a.active {
+    background-color: var(--white_color);
+    color: var(--text_color);
+}
+
+/* Changes the color of the active svg */
+.top-links a.active svg {
+    filter: invert(100%) sepia(100%) saturate(8%) hue-rotate(118deg) brightness(101%) contrast(104%);
+}
+
+.top-links a svg {
+    margin-right: 34px;
 }
 
 .aside-bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-    width: 332px;
-    height: 120px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
-
-.help {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 16px 48px;
-    gap: 32px;
-    width: 332px;
-    height: 56px;
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
-}
-
-#help {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
     width: 100%;
-    height: 22px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-}
-
-.log-out {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 16px 48px;
-    gap: 32px;
-    width: 332px;
-    height: 56px;
-    flex: none;
-    order: 3;
-    align-self: stretch;
-    flex-grow: 0;
-}
-
-#log-out {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-    width: 100%;
-    height: 22px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+    padding-bottom: 48px;
 }
 
 .aside-bottom a {
-    width: 119px;
-    height: 22px;
-    font-family: 'Manrope';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 22px;
+    text-decoration: none;
+    color: var(--white_color);
+    width: 100%;
+    height: 56px;
     display: flex;
     align-items: center;
-    color: #FEFEFE;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    padding: 16px 48px;
 }
 
+.aside-bottom a svg {
+    margin-right: 34px;
+}
+
+.hide {
+    display: none;
+}
+
+/* SIDE NAVIGATION BAR ENDS HERE */
+
+
+/* Edit page */
 main {
-    width: 100%;
+    width: calc(100vw - 332px);
     padding: 80px 120px 148px 48px;
+    overflow-y: auto;
     margin-left: 332px;
+    /* notify if changes are made */
 }
 
+/* SEARCH BAR STARTS HERE */
+/* Search bar */
+/* Set the width of your main content to calc(100vw - 332px) to prevent overflow. Refer to my code for main tag above */
 .search {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    /* position: absolute; */
-    width: 940px;
+    width: 100%;
     height: 56px;
-    left: 380px;
-    top: 80px;
+    align-items: center;
+}
+
+.small-screen {
+    display: none;
 }
 
 .search-bar {
-    box-sizing: border-box;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    padding: 0px;
-    width: 884px;
-    height: 56px;
-    background: #FEFEFE;
-    border: 2px solid #D2D2D2;
-    border-radius: 8px;
-}
-
-.search-icon-back {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    width: 88%;
+    height: 100%;
     padding: 16px;
-    gap: 8px;
-    width: 56px;
-    height: 56px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-}
-
-input {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-    width: 141px;
-    height: 22px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+    border: 2px solid var(--search_bar_color);
+    border-radius: 8px;
+    margin-right: 20px;
 }
 
 .search-text {
@@ -381,21 +193,22 @@ input {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    opacity: 0.5;
 }
 
 .search-text:focus {
     outline: none;
 }
 
-.search-icons {
-    padding: 16px;
-    gap: 16px;
-    width: 56px;
-    height: 56px;
+.search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--white_color);
+    cursor: pointer;
 }
 
-
+/* SEARCH BAR ENDS HERE */
 
 .sch-direct {
     display: flex;

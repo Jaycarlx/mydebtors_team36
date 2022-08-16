@@ -49,3 +49,18 @@ input[type=submit]:hover {
  
   padding: 50px;
 }
+
+.welcome-login-btn{
+  background-color: #0a66c2;
+  color: white;
+  padding: 7px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 93.2%;
+}
+
+.links{
+  display: flex;
+width: 50%;
+}
