@@ -40,7 +40,7 @@ const showCookies = () => {
     svg_btn.className = "svg-btn";
     svg_btn.setAttribute("onclick", "removePopup()");
     let svg = document.createElement("img");
-    svg.setAttribute("src", "./img/cookies.svg")
+    svg.setAttribute("src", "static/img/cookies.svg")
 
     svg_btn.appendChild(svg)
     // svg_back.appendChild(svg_btn)

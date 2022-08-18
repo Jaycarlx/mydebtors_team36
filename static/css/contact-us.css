@@ -391,8 +391,8 @@ a {
   box-shadow: 0px 32px 54px 0px #778ba540;
   padding-bottom: 77px;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 60%;
+  left: 40%;
   transform: scale(0.1);
   visibility: hidden;
   transition: all 0.5s;
